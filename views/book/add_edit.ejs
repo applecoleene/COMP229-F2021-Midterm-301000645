@@ -1,0 +1,81 @@
+<%- include ../partials/header.ejs %>
+
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= book._id %>"
+                    >
+                    <label for="bookTextField">Title</label>
+                    <input type="text" class="form-control"
+                        id="bookTextField"
+                        placeholder="Enter the Title"
+                        name="Title" 
+                        value="<%= book.Title %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="bookTextField">Description</label>
+                    <input type="text" class="form-control"
+                        id="bookTextField"
+                        placeholder="Enter the Description"
+                        name="Description" 
+                        value="<%= book.Description %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="statusTextField">Price</label>
+                    <input type="number" class="form-control"
+                    id="statusTextField"
+                    placeholder="00"
+                    name="Price" 
+                    value="<%= book.Price %>"
+                    >
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="bookTextField">Author</label>
+                    <input type="text" class="form-control"
+                        id="bookTextField"
+                        placeholder="Enter the Author"
+                        name="Author" 
+                        value="<%= book.Author %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="bookTextField">Genre</label>
+                    <input type="text" class="form-control"
+                        id="bookTextField"
+                        placeholder="Enter the Genre"
+                        name="Genre" 
+                        value="<%= book.Genre %>"
+                        required>
+                </div>
+                <br />
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+                
+                <a href="/book/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include ../partials/footer.ejs %>

@@ -1,0 +1,42 @@
+<%- include ../partials/header.ejs %>
+
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+                <div class="form-group">
+                    <label for="bookTextField">Title</label>
+                    <strong><%= book.Title %></strong>
+                </div>
+                <div class="form-group">
+                    <label for="bookTextField">Description</label>
+                    <strong><%= book.Description %></strong>
+                </div>
+                <div class="form-group">
+                    <label for="statusTextField">Price</label>
+                    <strong>$<%= book.Price %></strong>                    
+                </div>
+                <div class="form-group">
+                    <label for="bookTextField">Author</label>
+                    <strong><%= book.Author %></strong>
+                </div>
+                <div class="form-group">
+                    <label for="bookTextField">Genre</label>
+                    <strong><%= book.Genre %></strong>
+                </div>
+                <br />
+                
+                <a href="/book/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include ../partials/footer.ejs %>
